@@ -5,6 +5,10 @@ import { BackgroundLines } from '@components/components/ui/background-lines';
 import { ExpandableCardDemo } from '@components/components/ui/expandablecard';
 import { LampDemo } from '@components/components/ui/lamp';
 import Image from 'next/image';
+import { WavyBackground } from '@components/components/ui/wave-background';
+import { FlipWords } from '@components/components/ui/flipwords';
+import { SparklesPreview } from '@components/components/Sparklespreview';
+
 const archivo = Archivo({ subsets: ["latin"] });
 
 
@@ -69,32 +73,31 @@ export default function Home() {
       imgSrc: "https://i.pravatar.cc/100?img=6"
     }
   ];
+  const words = ["Decently", "Decentrally"];
   return (
+
     <>
       {/* Main Section */}
-      <div className="relative h-[90vh] bg-cover bg-center flex flex-col items-center justify-center px-4 md:px-8 bg-[url('/images/herobg2.png')]">
-
-        {/* Semi-transparent dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-        <h1 className="relative z-5 text-center font-archivo text-[40px] md:text-[45px] lg:text-[50px] xl:text-[64px] leading-tight md:leading-snug xl:leading-normal font-bold text-white mb-4 px-6 lg:px-8 2xl:px-48">
-          Decentralized Investment Banking & Startup Listing Marketplace
+      <WavyBackground className="relative w-screen min-h-screen flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 max-w-full overflow-hidden">
+        <h1 className="text-center font-archivo text-[40px] sm:text-[40px] md:text-[45px] lg:text-[45px] xl:text-[50px] leading-snug md:leading-snug xl:leading-normal font-bold text-white mb-4 px-6 lg:px-8 2xl:px-36">
+          Invest
+          <FlipWords words={words} />| <br /> Secure, transparent, and fair investments
         </h1>
 
-        <p className="relative z-5 text-center font-inter text-[18px] md:text-[20px] xl:text-[24px] leading-normal md:leading-relaxed xl:leading-relaxed text-white mb-4">
-          Access simple, secure, and seamless investment opportunities today.
+        <p className="text-center font-inter text-[16px] sm:text-[18px] md:text-[20px] xl:text-[24px] leading-normal md:leading-relaxed xl:leading-relaxed text-white mb-4">
+          Decentralized Investment Banking & Startup Listing Marketplace
         </p>
 
-        <button className="relative z-5 mt-8 h-[52px] px-6 md:px-8 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-md transition-colors hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40">
+        <button className="mt-8 h-[52px] px-6 md:px-8 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-md transition-colors hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40">
           Get Started
         </button>
+      </WavyBackground>
 
-      </div>
 
       {/* Secondary Section */}
       <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8">
-        <h1 className="text-center font-archivo text-[40px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
-          How It Works
+        <h1 className="text-center font-archivo text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
+          Register Your Startup Now!!
         </h1>
         <p className="text-center font-inter text-[16px] md:text-[18px] lg:text-[20px] xl:text-[18px] leading-[24px] md:leading-[28px] lg:leading-[32px] xl:leading-[28px] text-[#F3F4F6] mb-4 mt-2">
           Effortlessly navigate through our investment platform with these simple steps.
@@ -106,10 +109,8 @@ export default function Home() {
 
       {/* Third Section */}
       <div className="relative left-0 w-full min-h-screen bg-[#000000] rounded-none flex flex-col items-center">
-        <h1 className="text-[40px] leading-[56px] font-bold text-white font-archivo text-center mb-4 mt-16">
-          Startup Discovery
-        </h1>
-        <p className="text-[16px] leading-[26px] font-normal text-[#F3F4F6] font-inter text-center">
+        <SparklesPreview/>
+        <p className="text-[16px] xl:text-[25px] leading-[26px] font-normal text-[#F3F4F6] font-inter text-center mt-90 px-8">
           Explore and invest in promising startups with unique NFTs.
         </p>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-0">
@@ -123,7 +124,7 @@ export default function Home() {
           <div className="w-full mx-auto">
             <div className="text-center max-w-xl mx-auto">
               <h1 className="text-6xl md:text-7xl font-bold mb-5 text-white">
-                What people <br /> are saying.
+                What people <br /> are saying
               </h1>
               <h3 className="text-xl mb-5 font-light text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -179,11 +180,11 @@ export default function Home() {
       </div>
 
       <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8">
-        <h1 className="text-center font-archivo text-[40px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
+        <h1 className="text-center font-archivo text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
           Empower Your Future
         </h1>
         <p className="text-center font-inter text-[16px] md:text-[18px] lg:text-[20px] xl:text-[18px] leading-[24px] md:leading-[28px] lg:leading-[32px] xl:leading-[28px] text-[#F3F4F6] mb-4 mt-2 px-6 lg:px-8 2xl:px-48">
-          Join DecentInvest today and take the first step towards mastering your financial journey. Connect with industry experts and gain insights to make informed investment decisions.
+          Join DecentInvest today and take the first step towards mastering your financial journey.
         </p>
         <button className="h-[52px] px-4 md:px-6 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-[6px] transition-colors duration-300 ease-in-out hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40 mt-4">
           Get Started

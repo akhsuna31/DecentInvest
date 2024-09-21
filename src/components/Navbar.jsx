@@ -12,7 +12,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-[#171A1F]  fixed z-10 w-full top-0">
+        <nav className="bg-[#171A1F]  fixed z-40 w-full top-0">
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 lg:mr-2 lg:pr-12 lg:ml-4 lg:w-full">
                 <div className='flex items-center gap-1'>
                     <Image width={70} height={60} src='/images/logo.png' className="h-16" alt="Flowbite Logo" />
