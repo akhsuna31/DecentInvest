@@ -131,11 +131,9 @@ export default function Home() {
                     <div className="w-full">
                       <p className="text-sm leading-tight">
                         <span className="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                          "
                         </span>
                         {testimonial.text}
                         <span className="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                          "
                         </span>
                       </p>
                     </div>
