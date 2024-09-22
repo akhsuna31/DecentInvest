@@ -231,8 +231,8 @@ const cards = [
     },
 
     {
-        description: "Metallica",
-        title: "For Whom The Bell Tolls",
+        description: "Tech",
+        title: "Startup Name",
         src: "https://assets.aceternity.com/demos/metallica.jpeg",
         ctaText: "Visit",
         ctaLink: "https://ui.aceternity.com/templates",
@@ -252,8 +252,8 @@ const cards = [
         },
     },
     {
-        description: "Lord Himesh",
-        title: "Aap Ka Suroor",
+        description: "Tech",
+        title: "Startup Name",
         src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
         ctaText: "Visit",
         ctaLink: "https://ui.aceternity.com/templates",

@@ -8,37 +8,14 @@ import Image from 'next/image';
 import { WavyBackground } from '@components/components/ui/wave-background';
 import { FlipWords } from '@components/components/ui/flipwords';
 import { SparklesPreview } from '@components/components/Sparklespreview';
+import facebook from '../../public/images/facebook.svg'
+import twitter from '../../public/images/twitter.svg'
+import youtube from '../../public/images/youtube.svg'
+import linkedin from '../../public/images/linkedin.svg'
+import { AppleCardsCarouselDemo } from '@components/components/cards';
 
 const archivo = Archivo({ subsets: ["latin"] });
 
-
-// Define or import the projects data
-const projects = [
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "",
-  },
-  {
-    title: "Netflix",
-    description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "",
-  },
-  {
-    title: "Google",
-    description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "",
-  },
-  {
-    title: "Meta",
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "",
-  },
-];
 
 export default function Home() {
   const testimonials = [
@@ -78,8 +55,8 @@ export default function Home() {
 
     <>
       {/* Main Section */}
-      <WavyBackground className="relative w-screen min-h-screen flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 max-w-full overflow-hidden">
-        <h1 className="text-center font-archivo text-[40px] sm:text-[40px] md:text-[45px] lg:text-[45px] xl:text-[50px] leading-snug md:leading-snug xl:leading-normal font-bold text-white mb-4 px-6 lg:px-8 2xl:px-36">
+      <WavyBackground className="relative w-screen min-h-screen flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 max-w-full overflow-hidden" id="Home">
+        <h1 className="text-center font-archivo text-[40px] sm:text-[40px] md:text-[45px] lg:text-[45px] xl:text-[60px] leading-snug md:leading-snug xl:leading-normal font-bold text-white mb-4 px-6 lg:px-8 2xl:px-36">
           Invest
           <FlipWords words={words} />| <br /> Secure, transparent, and fair investments
         </h1>
@@ -95,7 +72,7 @@ export default function Home() {
 
 
       {/* Secondary Section */}
-      <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8">
+      <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8" id="register">
         <h1 className="text-center font-archivo text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
           Register Your Startup Now!!
         </h1>
@@ -103,23 +80,18 @@ export default function Home() {
           Effortlessly navigate through our investment platform with these simple steps.
         </p>
         <button className="h-[52px] px-4 md:px-6 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-[6px] transition-colors duration-300 ease-in-out hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40 mt-4">
-          See all tutorials
+          Register
         </button>
       </div>
 
       {/* Third Section */}
-      <div className="relative left-0 w-full min-h-screen bg-[#000000] rounded-none flex flex-col items-center">
-        <SparklesPreview/>
-        <p className="text-[16px] xl:text-[25px] leading-[26px] font-normal text-[#F3F4F6] font-inter text-center mt-90 px-8">
-          Explore and invest in promising startups with unique NFTs.
-        </p>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-0">
-          <ExpandableCardDemo />
-          <ExpandableCardDemo />
-        </div>
+      <div className="relative left-0 w-full min-h-screen bg-[#000000] rounded-none flex flex-col items-center" id="startups">
+
+        <AppleCardsCarouselDemo />
+
       </div>
 
-      <div className=" w-full min-h-screen bg-black flex items-center justify-center">
+      <div className="w-full min-h-screen bg-black flex items-center justify-center mt-200" id="review">
         <div className="w-full bg-black px-5 py-16 md:py-24 text-gray-800">
           <div className="w-full mx-auto">
             <div className="text-center max-w-xl mx-auto">
@@ -179,7 +151,7 @@ export default function Home() {
 
       </div>
 
-      <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8">
+      <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8" >
         <h1 className="text-center font-archivo text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
           Empower Your Future
         </h1>
@@ -191,13 +163,13 @@ export default function Home() {
         </button>
       </div>
 
-      <footer className="bg-[#171A1F] py-12">
+      <footer className="bg-[#171A1F] py-12" id="news">
         <div className="container mx-auto px-4 text-center">
           {/* Logo Section */}
-          <div className="flex justify-center items-center gap-0">
+          <div className="flex justify-center items-center mr-4">
             {/* You can replace this with your logo */}
             <Image width={70} height={60} src='/images/logo.png' className="h-16" alt="Flowbite Logo" />
-            <h1 className="w-[204px] h-[48px] font-archivo text-4xl leading-[48px] font-bold text-white">
+            <h1 className="w-[240px] h-[48px] font-archivo text-4xl leading-[48px] font-bold text-white">
               DecentInvest
             </h1>
           </div>
@@ -257,22 +229,23 @@ export default function Home() {
           </div>
 
           {/* Social Media and Legal Links */}
-          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-            <div className="mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-center items-center text-gray-400 text-sm">
+            <div className="mb-4 md:mb-0 md:mr-56 lg:mr-56
+            xl:mr-56">
               © 2024 Brand, Inc. • <a href="#privacy" className="hover:text-white">Privacy</a> • <a href="#terms" className="hover:text-white">Terms</a> • <a href="#sitemap" className="hover:text-white">Sitemap</a>
             </div>
             <div className="flex space-x-4">
               <a href="#twitter" className="text-gray-400 hover:text-white">
-                <i className="fab fa-twitter"></i>
+                <Image src={twitter} alt="Facebook" width={30} height={30} />
               </a>
               <a href="#facebook" className="text-gray-400 hover:text-white">
-                <i className="fab fa-facebook-f"></i>
+                <Image src={facebook} alt="Facebook" width={30} height={30} />
               </a>
               <a href="#linkedin" className="text-gray-400 hover:text-white">
-                <i className="fab fa-linkedin"></i>
+                <Image src={linkedin} alt="Facebook" width={30} height={30} />
               </a>
               <a href="#youtube" className="text-gray-400 hover:text-white">
-                <i className="fab fa-youtube"></i>
+                <Image src={youtube} alt="Facebook" width={30} height={30} />
               </a>
             </div>
           </div>

@@ -39,28 +39,29 @@ const Navbar = () => {
                     <ul className="font-semibold flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent dark:bg-gray-800 dark:border-gray-700">
                         <li>
                             <a href="#" className='px-[15px] py-[12px] flex items-center justify-center text-[#636AE8] cursor-pointer whitespace-nowrap font-bold relative'>
-                                Features
+                                Home
                                 <div className='absolute bottom-[-4px] left-0 w-full h-[4px] bg-[#636AE8] rounded-[2px]'></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap'>
-                                Docs
+                            <a href="#register" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7]  cursor-pointer whitespace-nowrap'>
+                                Register
                             </a>
                         </li>
                         <li>
-                            <a href="#" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7]  cursor-pointer whitespace-nowrap'>
-                                Pricing
+                        <a href="#startups" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap'>
+                                Startups
+                            </a>
+                            
+                        </li>
+                        <li>
+                        <a href="#review" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7]  cursor-pointer whitespace-nowrap'>
+                                Reviews
                             </a>
                         </li>
                         <li>
-                            <a href="#" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7]  cursor-pointer whitespace-nowrap'>
-                                About us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap'>
-                                Blog
+                            <a href="#news" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap'>
+                                NewsLetter
                             </a>
                         </li>
                     </ul>
@@ -69,28 +70,30 @@ const Navbar = () => {
                     <ul className="font-semibold text-lg flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                         <li>
                             <a href="#" className="px-[15px] py-[12px] flex items-center justify-center text-[#636AE8] cursor-pointer whitespace-nowrap font-bold relative">
-                                Features
+                                Home
                                 <div className="absolute bottom-[-4px] left-0 w-full h-[4px] bg-[#636AE8] rounded-[2px]"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
-                                Docs
+                            
+                            <a href="#register" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
+                                Register
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
-                                Pricing
+                        <a href="#startups" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
+                                Startups
+                            </a>
+                            
+                        </li>
+                        <li>
+                        <a href="#review" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
+                                Reviews
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
-                                About us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
-                                Blog
+                            <a href="#news" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
+                                NewsLetter
                             </a>
                         </li>
                     </ul>
