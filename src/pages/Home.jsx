@@ -1,18 +1,15 @@
 'use client'
 import React from 'react';
 import { Archivo } from "next/font/google";
-import { BackgroundLines } from '@components/components/ui/background-lines';
-import { ExpandableCardDemo } from '@components/components/ui/expandablecard';
-import { LampDemo } from '@components/components/ui/lamp';
+
 import Image from 'next/image';
-import { WavyBackground } from '@components/components/ui/wave-background';
+import { WavyBackground } from '../components/ui/wave-background';
 import { FlipWords } from '@components/components/ui/flipwords';
-import { SparklesPreview } from '@components/components/Sparklespreview';
 import facebook from '../../public/images/facebook.svg'
 import twitter from '../../public/images/twitter.svg'
 import youtube from '../../public/images/youtube.svg'
 import linkedin from '../../public/images/linkedin.svg'
-import { AppleCardsCarouselDemo } from '@components/components/cards';
+import { AppleCardsCarouselDemo } from '../components/Cards';
 
 const archivo = Archivo({ subsets: ["latin"] });
 

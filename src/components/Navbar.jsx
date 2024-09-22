@@ -49,13 +49,13 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                        <a href="#startups" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap'>
+                            <a href="#startups" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap'>
                                 Startups
                             </a>
-                            
+
                         </li>
                         <li>
-                        <a href="#review" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7]  cursor-pointer whitespace-nowrap'>
+                            <a href="#review" className='px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7]  cursor-pointer whitespace-nowrap'>
                                 Reviews
                             </a>
                         </li>
@@ -75,19 +75,19 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            
+
                             <a href="#register" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
                                 Register
                             </a>
                         </li>
                         <li>
-                        <a href="#startups" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
+                            <a href="#startups" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
                                 Startups
                             </a>
-                            
+
                         </li>
                         <li>
-                        <a href="#review" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
+                            <a href="#review" className="px-[15px] py-[12px] flex items-center justify-center text-[#A7ADB7] cursor-pointer whitespace-nowrap">
                                 Reviews
                             </a>
                         </li>
