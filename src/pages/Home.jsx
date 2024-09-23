@@ -69,7 +69,7 @@ export default function Home() {
 
 
       {/* Secondary Section */}
-      <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8" id="register">
+      <div className="relative w-full bg-[#1D2128] h-[40vh] md:py-[60px] lg:py-[80px] flex flex-col items-center justify-center px-4 md:px-8" id="register">
         <h1 className="text-center font-archivo text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
           Register Your Startup Now!!
         </h1>
