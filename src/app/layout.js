@@ -1,8 +1,7 @@
-import { Inter, Archivo } from "next/font/google"; // Add Archivo if not already added
+import { Inter, Archivo } from "next/font/google";
 import "./globals.css";
-import Navbar from "@components/components/Navbar";
-import Home from "../pages/Home";
-import Head from "next/head"; // Import Head
+import Head from "next/head"; 
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const archivo = Archivo({ subsets: ["latin"] });
@@ -12,17 +11,16 @@ export const metadata = {
   description: "",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, navbar }) {
   return (
     <html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Other meta tags, links, or stylesheets can go here */}
       </Head>
       <body className={`${inter.className} ${archivo.className}`} style={{ background: 'white' }}>
-        <Navbar />
-        <Home />
+        {navbar} {/* Render the specific navbar here */}
         {children}
+        <Footer />
       </body>
     </html>
   );

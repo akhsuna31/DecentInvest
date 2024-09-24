@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "../../lib/utils";
+import { cn } from "@components/lib/utils";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -13,6 +13,7 @@ export const BackgroundLines = ({
       className={cn("h-[20rem] md:h-screen w-full bg-white dark:bg-black", className)}>
       <SVG svgOptions={svgOptions} />
       {children}
+      
     </div>)
   );
 };

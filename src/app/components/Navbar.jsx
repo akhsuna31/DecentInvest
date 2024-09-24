@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-
+import logo from '../../public/images/logo.png'
 const Navbar = () => {
     // State to manage dropdown visibility
     const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +12,10 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-[#171A1F]  fixed z-40 w-full top-0">
+        <nav className="bg-[#171A1F]  fixed z-50 w-full top-0">
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 lg:px-0 lg:mr-2 lg:pr-12 lg:ml-4 lg:w-full">
                 <div className='flex items-center gap-1'>
-                    <Image width={70} height={60} src='/images/logo.png' className="h-16" alt="Flowbite Logo" />
+                    <Image width={70} height={60} src={logo}className="h-16" alt="Flowbite Logo" />
                     <h1 className='font-archivo text-[28px] leading-[42px] font-bold text-[#FFFFFF]'>
                         DecentInvest
                     </h1>
