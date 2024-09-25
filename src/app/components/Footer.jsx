@@ -5,6 +5,7 @@ import twitter from '../../public/images/twitter.svg'
 import youtube from '../../public/images/youtube.svg'
 import linkedin from '../../public/images/linkedin.svg'
 import Image from 'next/image';
+import logo from '../../public/images/logo.png'
 export default function Footer() {
   return (
     <div>
@@ -13,7 +14,7 @@ export default function Footer() {
           {/* Logo Section */}
           <div className="flex justify-center items-center mr-4">
             {/* You can replace this with your logo */}
-            <Image width={70} height={60} src='/images/logo.png' className="h-16" alt="Flowbite Logo" />
+            <Image width={70} height={60} src={logo} className="h-16" alt="Flowbite Logo" />
             <h1 className="w-[240px] h-[48px] font-archivo text-4xl leading-[48px] font-bold text-white">
               DecentInvest
             </h1>

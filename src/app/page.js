@@ -1,15 +1,13 @@
 'use client'
 import React from 'react';
 import { Archivo } from "next/font/google";
-
 import { WavyBackground } from './components/ui/wave-background';
-import { FlipWords } from './components/ui/flipwords';
-
 import { AppleCardsCarouselDemo } from './components/Cards';
 import { useRouter } from 'next/navigation';
 import Navbar from './components/Navbar';
-const archivo = Archivo({ subsets: ["latin"] });
+import Image from 'next/image'; // Importing Image from next/image
 
+const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Home() {
   const router = useRouter();
@@ -50,7 +48,7 @@ export default function Home() {
       imgSrc: "https://i.pravatar.cc/100?img=6"
     }
   ];
-  const words = ["Decently", "Decentrally"];
+
   return (
     <>
       <div className="bg-black min-h-screen">
@@ -58,22 +56,18 @@ export default function Home() {
         {/* Main Section */}
         <WavyBackground className="relative w-screen min-h-screen flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 max-w-full overflow-hidden" id="Home">
           <h1 className="text-center font-archivo text-[40px] sm:text-[40px] md:text-[45px] lg:text-[45px] xl:text-[60px] leading-snug md:leading-snug xl:leading-normal font-bold text-white mb-4 px-6 lg:px-8 2xl:px-36">
-            Invest
-            <FlipWords words={words} />| <br /> Secure, transparent, and fair investments
+            Invest Decently, Invest Decentrally: Secure, transparent, and fair investments.
           </h1>
-
           <p className="text-center font-inter text-[16px] sm:text-[18px] md:text-[20px] xl:text-[24px] leading-normal md:leading-relaxed xl:leading-relaxed text-white mb-4">
             Decentralized Investment Banking & Startup Listing Marketplace
           </p>
-
           <button className="mt-8 h-[52px] px-6 md:px-8 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-md transition-colors hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40">
             Get Started
           </button>
         </WavyBackground>
 
-
         {/* Secondary Section */}
-        <div className="relative w-full bg-[#1D2128] h-[40vh] md:py-[60px] lg:py-[80px] flex flex-col items-center justify-center px-4 md:px-8" id="register">
+        <div className="relative w-full bg-black h-[40vh] md:py-[60px] lg:py-[80px] flex flex-col items-center justify-center px-4 md:px-8" id="register">
           <h1 className="text-center font-archivo text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
             Register Your Startup Now!!
           </h1>
@@ -84,9 +78,13 @@ export default function Home() {
             Register
           </button>
         </div>
+        <div className='mt-16' id="startup">
+          <h1 className="text-center font-archivo text-[40px] sm:text-[40px] md:text-[45px] lg:text-[45px] xl:text-[80px]  font-bold text-white px-6 lg:px-8">
+            Startup Discovery
+          </h1>
+          <AppleCardsCarouselDemo />
+        </div>
 
-        <AppleCardsCarouselDemo />
-        
         <div className="w-full min-h-screen bg-black flex items-center justify-center mt-200" id="review">
           <div className="w-full bg-black px-5 py-16 md:py-24 text-gray-800">
             <div className="w-full mx-auto">
@@ -115,9 +113,11 @@ export default function Home() {
                     <div className="w-full max-w-sm mx-auto rounded-lg bg-white border border-gray-200 shadow-md p-5 text-gray-800">
                       <div className="w-full flex mb-4 items-center">
                         <div className="overflow-hidden rounded-full w-12 h-12 bg-gray-50 border border-gray-200">
-                          <img
+                          <Image // Replace img with Image
                             src={testimonial.imgSrc}
                             alt={testimonial.name}
+                            width={100} // Set width for the image
+                            height={100} // Set height for the image
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -142,22 +142,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-        </div>
-
-        <div className="relative w-full bg-[#1D2128] py-[40px] md:py-[60px] lg:py-[80px] flex flex-col items-center px-4 md:px-8" >
-          <h1 className="text-center font-archivo text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px] leading-[32px] md:leading-[40px] lg:leading-[48px] xl:leading-[68px] font-bold text-[#636AE8] mb-4 px-4 md:px-6 lg:px-8 xl:px-12">
-            Empower Your Future
-          </h1>
-          <p className="text-center font-inter text-[16px] md:text-[18px] lg:text-[20px] xl:text-[18px] leading-[24px] md:leading-[28px] lg:leading-[32px] xl:leading-[28px] text-[#F3F4F6] mb-4 mt-2 px-6 lg:px-8 2xl:px-48">
-            Join DecentInvest today and take the first step towards mastering your financial journey.
-          </p>
-          <button className="h-[52px] px-4 md:px-6 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-[6px] transition-colors duration-300 ease-in-out hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40 mt-4">
-            Get Started
-          </button>
         </div>
       </div>
     </>
   );
 }
-
