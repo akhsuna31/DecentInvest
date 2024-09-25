@@ -22,7 +22,7 @@ export default function Page() {
     return (
         <div className="bg-black min-h-screen flex items-center justify-center">
             <Accountnav />
-            <div className="w-full xl:max-w-2xl 2xl:max-w-3xl p-8 bg-black text-white rounded-lg mb-8 xl:ml-auto flex flex-col items-center">
+            <div className="w-full xl:max-w-2xl 2xl:max-w-3xl p-8 bg-black text-white rounded-lg mb-8 xl:ml-auto flex flex-col items-center mt-16">
                 <button
                     className="text-sm mb-8 flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                     onClick={() => router.push('/')}
@@ -54,7 +54,7 @@ export default function Page() {
 
                 <button
                     onClick={handleGoogleSignUp}
-                    className="w-full bg-blue-500 text-white py-3 rounded-lg flex justify-center items-center font-bold transition-colors duration-300 hover:bg-blue-600 mb-6"
+                    className="w-full bg-[#636AE8] text-white py-3 rounded-lg flex justify-center items-center font-bold transition-colors duration-300 hover:bg-[#4850E4] active:bg-[#2C35E0] mb-6"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -108,6 +108,18 @@ export default function Page() {
                         className="w-full bg-gray-800 border border-gray-600 rounded-lg py-3 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
                         required
                     />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        className="w-full bg-gray-800 border border-gray-600 rounded-lg py-3 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+                        required
+                    />
+                    <input
+                        type="password"
+                        placeholder="Confirm Password"
+                        className="w-full bg-gray-800 border border-gray-600 rounded-lg py-3 px-4 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+                        required
+                    />
                     <select
                         className="w-full bg-gray-800 border border-gray-600 rounded-lg py-3 px-4 text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
                         required
@@ -123,7 +135,7 @@ export default function Page() {
 
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-3 rounded-lg font-bold transition-colors duration-300 hover:bg-blue-600 mb-6"
+                        className="w-full bg-[#636AE8] text-white py-3 rounded-lg font-bold transition-colors duration-300 hover:bg-[#4850E4] active:bg-[#2C35E0] mb-6"
                     >
                         Sign up with email
                     </button>
@@ -172,6 +184,6 @@ export default function Page() {
                     className="absolute bottom-0 right-72 max-w-[50%] lg:max-w-[300px] md:max-w-[200px]"
                 />
             </div>
-        </div>
+        </div >
     );
 }
