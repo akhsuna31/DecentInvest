@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import logo from '../../public/images/logo.png'
+import { useRouter } from 'next/navigation';
+
 const Navbar = () => {
+    const router = useRouter();
     // State to manage dropdown visibility
     const [isOpen, setIsOpen] = useState(false);
 
@@ -98,8 +101,10 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="flex items-center md:flex 2xl:absolute 2xl:right-80 xl:absolute xl:right-80 lg:absolute lg:right-80" id="loginBtn">
-                        <button className="w-[170px] h-[46px] px-[12px] flex items-center justify-center font-inter text-[16px] leading-[22px] font-normal text-[#FFFFFF] bg-[#636AE8] border-none rounded-[8px] opacity-100 hover:text-[#FFFFFF] hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40 lg:w-[130px] xl:w-[170px]">
-                            Get Started
+                        <button className="w-[170px] h-[46px] px-[12px] flex items-center justify-center font-inter text-[16px] leading-[22px] font-normal text-[#FFFFFF] bg-[#636AE8] border-none rounded-[8px] opacity-100 hover:text-[#FFFFFF] hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40 lg:w-[130px] xl:w-[170px]" onClick={()=>{
+                            router.push("/sign-in")
+                        }}>
+                            Login
                         </button>
                     </div>
                 </div>

@@ -61,7 +61,9 @@ export default function Home() {
           <p className="text-center font-inter text-[16px] sm:text-[18px] md:text-[20px] xl:text-[24px] leading-normal md:leading-relaxed xl:leading-relaxed text-white mb-4">
             Decentralized Investment Banking & Startup Listing Marketplace
           </p>
-          <button className="mt-8 h-[52px] px-6 md:px-8 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-md transition-colors hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40">
+          <button className="mt-8 h-[52px] px-6 md:px-8 flex items-center justify-center font-inter text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] text-white bg-[#636AE8] rounded-md transition-colors hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40" onClick={()=>{
+            router.push("/account")
+          }}>
             Get Started
           </button>
         </WavyBackground>

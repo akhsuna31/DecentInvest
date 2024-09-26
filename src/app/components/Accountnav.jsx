@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import logo from '../../public/images/logo.png'
+import { useRouter } from 'next/navigation';
+
 export default function Accountnav() {
+    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
 
     // Toggle dropdown visibility
@@ -52,10 +55,10 @@ export default function Accountnav() {
 
                 <div className="hidden w-full md:flex md:items-center md:absolute md:left-20 md:ml-56 md:justify-between 2xl:absolute 2xl:left-20 2xl:ml-56 xl:absolute xl:left-20 xl:ml-56 lg:absolute lg:left-20 lg:ml-56">
                     <div className="flex items-center md:flex 2xl:absolute 2xl:right-80 xl:absolute xl:right-80 lg:absolute lg:right-80 md:absolute md:right-80" id="loginBtn">
-                        <button className="w-[160px] h-[36px] px-3 flex items-center justify-center font-inter text-[14px] leading-[22px] font-normal text-[#636AE8] bg-white border border-[#636AE8] rounded-[8px] transition-colors duration-300 ease-in-out hover:text-[#4850E4] active:text-[#2C35E0] disabled:opacity-40 ">
+                        <button className="w-[160px] h-[36px] px-3 flex items-center justify-center font-inter text-[14px] leading-[22px] font-normal text-[#636AE8] bg-white border border-[#636AE8] rounded-[8px] transition-colors duration-300 ease-in-out hover:text-[#4850E4] active:text-[#2C35E0] disabled:opacity-40 " onClick={() => router.push('/sign-in')}>
                             Login
                         </button>
-                        <button className="w-40 h-9 px-3 flex items-center justify-center text-white bg-[#636AE8] opacity-100 font-inter text-sm font-normal leading-[22px] rounded-lg border-none hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40 ml-4">
+                        <button className="w-40 h-9 px-3 flex items-center justify-center text-white bg-[#636AE8] opacity-100 font-inter text-sm font-normal leading-[22px] rounded-lg border-none hover:bg-[#4850E4] active:bg-[#2C35E0] disabled:opacity-40 ml-4"onClick={() => router.push('/account')}>
                             Sign Up
                         </button>
                     </div>
