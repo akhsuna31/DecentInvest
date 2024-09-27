@@ -3,7 +3,7 @@ import React from 'react'
 import Accountnav from '../components/Accountnav'
 import { useRouter } from 'next/navigation';
 
-export default function page() {
+export default function Page() {
     const router = useRouter();
     const handleGoogleSignUp = () => {
         // Handle Google sign-up logic here
