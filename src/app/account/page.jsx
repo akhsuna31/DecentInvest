@@ -10,6 +10,9 @@ export default function Account() {
   const handleRegisterClick = () => {
     router.push('/investors-signup'); // Replace '/account' with your actual account page route
   };
+  const handleStartupClick = () => {
+    router.push('/startup-signup');
+  }
 
   return (
     <div className="bg-black min-h-screen flex flex-col items-center justify-center">
@@ -30,6 +33,7 @@ export default function Account() {
             <button
               className="w-full sm:w-[271px] h-[52px] px-5 flex items-center justify-center font-inter text-[18px] leading-[28px] font-bold text-[#171A1F] bg-white transition-colors duration-300 ease-in-out rounded-[6px] hover:text-[#171A1F] hover:bg-[#DEE1E6] active:bg-[#BCC1CA] disabled:opacity-40"
               disabled={false}
+              onClick={handleStartupClick}
             >
               Startup Account
             </button>
