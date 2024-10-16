@@ -26,12 +26,8 @@ export default function Dashnav() {
             >
                 {isSidebarOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
             </Button>
-            <aside className={`mt-16 bg-[#171A1F] h-full w-[370px] max-w-xs fixed left-0 top-0 z-40 transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                <div className='ml-8 h-[64px] px-3 py-4 flex items-center'>
-                    <Image width={70} height={60} src={logo} className="h-16" alt="DecentInvest Logo" />
-                    <h3 className='text-3xl text-white font-semibold'>DecentInvest</h3>
-                </div>
-                <div className="mt-5 flex flex-col gap-4 flex-grow">
+            <aside className={`bg-[#171A1F] h-full w-[370px] max-w-xs fixed left-0 top-0 z-40 transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className="mt-32 flex flex-col gap-4 flex-grow">
                     <Sidebarbtn label="Portfolio" icon={BriefcaseBusiness} iconColor='#F4A460' />
                     <Sidebarbtn label="Assets" icon={HandCoins} />
                     <Sidebarbtn label="Analytics" icon={ChartNoAxesCombined} iconColor='#F08080' />
