@@ -1,8 +1,8 @@
+'use client'
 import React,{ PureComponent } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import { ArrowUpWideNarrow } from 'lucide-react';
-import { PureComponent } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 
 const data = [
