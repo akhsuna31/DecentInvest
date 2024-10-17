@@ -4,7 +4,8 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import { ArrowUpWideNarrow } from 'lucide-react';
 import { PieChart, Pie, Sector, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-
+import { useMediaQuery } from 'react-responsive';
+import { DefaultTable } from '../components/Recentinvest';
 const data = [
   { name: 'Group A', value: 400, fill: '#CED0F8' },
   { name: 'Group B', value: 500, fill: '#636AE8' },
@@ -13,8 +14,8 @@ const data = [
 const data2 = [
   { name: 'Group A', value: 400, fill: '#7F55E0' },
   { name: 'Group B', value: 500, fill: '#636AE8' },
-  { name: 'Group C', value: 300, fill: '#22CCB2'},
-  { name: 'Group C', value: 250, fill: '#E8618C'},
+  { name: 'Group C', value: 300, fill: '#22CCB2' },
+  { name: 'Group C', value: 250, fill: '#E8618C' },
 ];
 
 const dataBar1 = [
@@ -79,6 +80,9 @@ const renderActiveShape = (props) => {
 };
 
 export default function Page(props) {
+  const isMediumOrLarger = useMediaQuery({ minWidth: 768 });
+  const innerRadius = isMediumOrLarger ? 120 : 80;
+  const outerRadius = isMediumOrLarger ? 180 : 120;
   const [activeIndex, setActiveIndex] = useState(0);
 
   const onPieEnter = (_, index) => {
@@ -185,27 +189,27 @@ export default function Page(props) {
           </div>
         </div>
         <div className='flex flex-col md:flex-row'>
-          <div className='flex flex-col items-center w-[50%]'>
+          <div className='flex flex-col items-center w-full md:w-[50%]'>
             <h1 className="mt-24 ml-4 md:ml-12 font-archivo text-[24px] md:text-[34px] leading-[30px] md:leading-[36px] font-bold text-white">
               Asset Distribution
             </h1>
             <div className="mt-24 flex-1 flex justify-center items-center w-full h-[600px] md:h-[600px] mt-8 md:mt-16">
-                <ResponsiveContainer width="80%" height={500}>
-                  <BarChart data={dataBar1}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" stroke="#E6E6E6" />
-                    <YAxis stroke="#E6E6E6" />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="uv" fill="#7F55E0" />
-                    <Bar dataKey="pv" fill="#636AE8" />
-                    <Bar dataKey="pv" fill="#22CCB2" />
-                    <Bar dataKey="pv" fill="#E8618C" />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
+              <ResponsiveContainer width="100%" height={500}>
+                <BarChart data={dataBar1}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" stroke="#E6E6E6" />
+                  <YAxis stroke="#E6E6E6" />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="uv" fill="#7F55E0" />
+                  <Bar dataKey="pv" fill="#636AE8" />
+                  <Bar dataKey="pv" fill="#22CCB2" />
+                  <Bar dataKey="pv" fill="#E8618C" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
-          <div className='flex flex-col items-center w-[50%]'>
+          <div className='flex flex-col items-center md:w-[50%] w-[full]'>
             <h1 className="mt-24 font-archivo text-[24px] md:text-[34px] leading-[30px] md:leading-[36px] font-bold text-white">
               Monthly Equity Holding 2022
             </h1>
@@ -218,8 +222,8 @@ export default function Page(props) {
                     data={data2}
                     cx="50%"
                     cy="50%"
-                    innerRadius={120}
-                    outerRadius={180}
+                    innerRadius={innerRadius}
+                    outerRadius={outerRadius}
                     fill="#8884d8"
                     dataKey="value"
                     onMouseEnter={onPieEnter}
@@ -228,6 +232,14 @@ export default function Page(props) {
               </ResponsiveContainer>
             </div>
           </div>
+        </div>
+        <div className=''>
+          <h1 className='mt-24 mb-16 font-archivo text-[24px] md:text-[34px] leading-[30px] md:leading-[36px] font-bold text-white'>Recent Investements</h1>
+          <DefaultTable />
+        </div>
+        <div className=''>
+          <h1 className='mt-24 mb-16 font-archivo text-[24px] md:text-[34px] leading-[30px] md:leading-[36px] font-bold text-white'>Recent Transactions</h1>
+          <DefaultTable />
         </div>
       </div>
     </div>
